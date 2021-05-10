@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Product</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="delete()">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="product">
+    <ion-item>
+      <ion-label position="stacked">Product Name </ion-label>
+      <ion-input [(ngModel)]="product.name" placeholder="Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Class </ion-label>
+      <ion-input [(ngModel)]="product.desc" placeholder="Description"></ion-input>
+    </ion-item>
+    
+
+    <ion-button expand="block" (click)="updateproductData()">Update Student</ion-button>
+   </div>
+</ion-content>
+
